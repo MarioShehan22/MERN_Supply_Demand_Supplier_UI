@@ -11,6 +11,7 @@ import {useGetAllProduct} from "../api/ProductService";
 import {useGetSelectedUsers} from "../api/UserService";
 import {useGetSelectedAddress} from "../api/AddressService";
 import AxiosInstance from "../config/AxiosInstance";
+import FooterSection from "../components/FooterSection";
 
 
 const PlaceSupplyPage = () => {
@@ -114,6 +115,7 @@ const PlaceSupplyPage = () => {
                   </button>
               </div>
           </div>
+          <FooterSection/>
       </>
   );
 }

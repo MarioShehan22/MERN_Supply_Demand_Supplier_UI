@@ -1,8 +1,9 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Supply} from "../utils/Utils";
 import {useStore} from "../store/store";
 import AxiosInstance from "../config/AxiosInstance";
 import NavigationBar from "../components/NavigationBar";
+import FooterSection from "../components/FooterSection";
 
 const SupplyDetailsPage = () => {
     const [data, setData] = useState<Supply[]>([]);
@@ -62,7 +63,7 @@ const SupplyDetailsPage = () => {
                                               supply.product.map((product,i) => (
                                                   <ul key={i}>
                                                       <li>
-                                                          {product.QuantityInKilos} : {product.name}
+                                                          {product.ProductName} : {product.supply}
                                                       </li>
                                                   </ul>
                                               ))):(
@@ -90,6 +91,7 @@ const SupplyDetailsPage = () => {
                   </div>
               </div>
           </div>
+          <FooterSection/>
       </>
   );
 }
