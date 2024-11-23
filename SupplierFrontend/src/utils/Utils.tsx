@@ -11,6 +11,7 @@ export type Product = {
     date?: string;
     supply?: number;
     purchasePrice: number | null;
+    "activeState": boolean|undefined,
 }
 
 export type Products = {

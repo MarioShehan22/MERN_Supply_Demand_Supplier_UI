@@ -6,6 +6,7 @@ import React from "react";
 import PlaceSupplyPage from "./pages/PlaceSupplyPage";
 import SupplyDetailsPage from "./pages/SupplyDetailsPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage/>}/>
+          <Route path="/" element={<HomePage/>} errorElement={<ErrorPage/>} />
           <Route path="/place-supply" element={<PlaceSupplyPage/>}/>
           <Route path="/about-us" element={<AboutUsPage/>}/>
           <Route path="/login" element={<Login/>}/>
